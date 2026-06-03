@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-outline-variant: rgba(200, 200, 200, 0.5);
+  --color-surface-tint: #c62828;
+  --color-on-tertiary-container: #111111;
+  --color-on-primary-fixed: #ffffff;
+  --color-tertiary: #1976d2;
+  --color-on-surface-variant: #333333;
+  --color-on-background: #111111;
+  --color-secondary-fixed: #ffcdd2;
+  --color-on-primary-container: #b71c1c;
+  --color-surface-container-high: rgba(255, 255, 255, 0.8);
+  --color-outline: rgba(0, 0, 0, 0.2);
+  --color-surface: rgba(255, 255, 255, 0.55);
+  --color-inverse-primary: #ffcdd2;
+  --color-tertiary-fixed: #bbdefb;
+  --color-surface-container: rgba(255, 255, 255, 0.4);
+  --color-on-secondary: #ffffff;
+  --color-background: transparent;
+  --color-on-error-container: #410002;
+  --color-on-tertiary: #ffffff;
+  --color-on-primary: #ffffff;
+  --color-secondary-container: rgba(255, 255, 255, 0.7);
+  --color-on-tertiary-fixed-variant: #2c3639;
+  --color-tertiary-fixed-dim: #90caf9;
+  --color-inverse-on-surface: rgba(255, 255, 255, 0.9);
+  --color-surface-bright: rgba(255, 255, 255, 0.85);
+  --color-surface-dim: rgba(255, 255, 255, 0.4);
+  --color-secondary: #e57373;
+  --color-inverse-surface: #222222;
+  --color-on-secondary-container: #b71c1c;
+  --color-secondary-fixed-dim: #ef9a9a;
+  --color-error: #ba1a1a;
+  --color-on-primary-fixed-variant: #2c3639;
+  --color-surface-container-lowest: rgba(255, 255, 255, 0.8);
+  --color-on-tertiary-fixed: #2c3639;
+  --color-on-secondary-fixed: #2c3639;
+  --color-surface-variant: rgba(255, 255, 255, 0.65);
+  --color-tertiary-container: #bbdefb;
+  --color-primary-fixed-dim: #ef9a9a;
+  --color-on-surface: #111111;
+  --color-error-container: #ffdad6;
+  --color-primary-container: #ffcdd2;
+  --color-primary: #d32f2f;
+  --color-surface-container-highest: rgba(255, 255, 255, 0.9);
+  --color-primary-fixed: #ffebee;
+  --color-surface-container-low: rgba(255, 255, 255, 0.45);
+  --color-on-secondary-fixed-variant: #2c3639;
+  --color-on-error: #ffffff;
+
+  --spacing-container-padding: 1.5rem;
+  --spacing-stack-lg: 2rem;
+  --spacing-stack-md: 1.25rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-stack-sm: 0.75rem;
+
+  --radius-xl: 1.5rem;
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+}
+
+@utility text-body-lg { font-size: 16px; line-height: 24px; font-weight: 400; }
+@utility text-label-sm { font-size: 11px; line-height: 14px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+@utility text-headline-md { font-size: 24px; line-height: 32px; font-weight: 600; }
+@utility text-body-md { font-size: 14px; line-height: 20px; font-weight: 400; }
+@utility text-headline-sm { font-size: 20px; line-height: 28px; font-weight: 600; }
+@utility text-headline-lg { font-size: 32px; line-height: 40px; font-weight: 700; }
+@utility text-headline-md-mobile { font-size: 20px; line-height: 28px; font-weight: 600; }
+@utility text-headline-lg-mobile { font-size: 24px; line-height: 32px; font-weight: 700; }
+@utility text-label-md { font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+
+@utility font-body-lg { font-family: "Inter", sans-serif; }
+@utility font-label-sm { font-family: "Inter", sans-serif; }
+@utility font-headline-md { font-family: "Playfair Display", serif; font-style: italic; font-weight: 600; }
+@utility font-body-md { font-family: "Inter", sans-serif; }
+@utility font-headline-sm { font-family: "Playfair Display", serif; font-style: italic; font-weight: 600; }
+@utility font-headline-lg { font-family: "Playfair Display", serif; font-style: italic; font-weight: 600; }
+@utility font-headline-md-mobile { font-family: "Playfair Display", serif; font-style: italic; font-weight: 600; }
+@utility font-headline-lg-mobile { font-family: "Playfair Display", serif; font-style: italic; font-weight: 600; }
+@utility font-label-md { font-family: "Inter", sans-serif; }
+
+/* Custom scrollbars */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #dcd7c9; border-radius: 10px; }
+
+/* Pulse animation for active status */
+@keyframes pulse-status {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.status-pulse {
+  animation: pulse-status 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-image: url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&q=80&w=2560&h=1440');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
