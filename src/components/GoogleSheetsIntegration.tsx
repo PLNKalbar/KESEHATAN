@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { googleSignIn, initAuth, getAccessToken, logout } from '../lib/firebase';
 import { User } from 'firebase/auth';
 import { FileSpreadsheet, LogIn, LogOut, Download, AlertCircle } from 'lucide-react';
-import { cn } from './utils';
+import { cn } from '../lib/utils';
 
 export function GoogleSheetsIntegration() {
   const [needsAuth, setNeedsAuth] = useState(true);
